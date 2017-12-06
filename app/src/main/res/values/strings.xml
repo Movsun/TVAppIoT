@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TV App IOT</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="signIn">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="setting">Setting</string>
+    <string name="devices">Devices</string>
+    <string name="value_n_a">No Content</string>
+    <string name="send_off">Send Off</string>
+    <string name="send_on">Send On</string>
+</resources>
