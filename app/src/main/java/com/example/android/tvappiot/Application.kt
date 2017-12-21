@@ -1,11 +1,11 @@
 package com.example.android.tvappiot
 
 object Application {
-    val AUTH_BASE_URL = "http://192.168.0.102/"
+    val AUTH_BASE_URL = "http://138.48.33.164/"
     val BASE_URL = AUTH_BASE_URL + "api/"
 
     val CLIENT_ID = 2
-    val CLIENT_SECRET = "gVMVZCHEDDV8QjV8O0xX3mjORIJtXCgnGHSw8zA7"
+    val CLIENT_SECRET = "8PWruyx3tPCL4vzKJVah19xMlJBLXKcQJuu91GpG"
     val GRANT_TYPE = "password"
 
     val PREF_NAME = "myPref"

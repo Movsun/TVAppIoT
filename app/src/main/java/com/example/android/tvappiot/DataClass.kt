@@ -35,6 +35,8 @@ data class Device (
     }
 }
 
+data class Sensor(val id: Int)
+
 data class Token (
         val token_type: String,
         val access_token: String,

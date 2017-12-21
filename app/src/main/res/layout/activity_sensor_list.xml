@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.tvappiot.DeviceListActivity">
+    android:padding="100dp"
+    tools:context="com.example.android.tvappiot.SensorListActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/deviceListRecycleView"
+        android:id="@+id/sensorListRecycleView"
         android:layout_width="946dp"
         android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"

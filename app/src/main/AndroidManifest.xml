@@ -28,7 +28,8 @@
         <activity android:name=".SingInActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".DeviceListActivity" />
-        <activity android:name=".DeviceDetailActivity"></activity>
+        <activity android:name=".DeviceDetailActivity" />
+        <activity android:name=".SensorListActivity"></activity>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_category.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -35,12 +36,15 @@ class CategoryActivity : Activity() {
             val webAppApi = WebAppApi.create(this)
             webAppApi.loadDevices().enqueue(object : Callback<ArrayList<Device>> {
                 override fun onResponse(call: Call<ArrayList<Device>>, response: Response<ArrayList<Device>>) {
-                    if (response.code() == 200) {
-                        val intent = Intent(this@CategoryActivity, DeviceListActivity::class.java)
-                        intent.putExtra(Application.SERIALIZE_LIST_NAME, response.body() as Serializable)
-                        startActivity(intent)
-                    } else {
-                        Log.d("code and message", response.code().toString() + response.message())
+                    when {
+                        response.code() == 200 -> {
+                            val intent = Intent(applicationContext, DeviceListActivity::class.java)
+                            intent.putExtra(Application.SERIALIZE_LIST_NAME, response.body() as Serializable)
+                            startActivity(intent)
+                        }
+                        response.code() == 401 -> Toast.makeText(applicationContext, response.message(), Toast.LENGTH_SHORT).show()
+                        else ->  Toast.makeText(applicationContext, response.code().toString()+ ": " + response.message(), Toast.LENGTH_SHORT).show()
+
                     }
                 }
                 override fun onFailure(call: Call<ArrayList<Device>>, t: Throwable?) {
